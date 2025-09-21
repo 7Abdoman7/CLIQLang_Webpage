@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIQLang - Quantum Programming Language</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="logo-icon.svg" type="image/svg+xml">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="logo-icon.svg" alt="CLIQLang" class="nav-logo">
+                <span>CLIQLang</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#features">Features</a>
+                <a href="#documentation">Docs</a>
+                <a href="#examples">Examples</a>
+                <a href="#download">Download</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="quantum-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="quantum-text">CLIQ</span>Lang
+                </h1>
+                <p class="hero-subtitle">The Future of Quantum Programming</p>
+                <p class="hero-description">
+                    A powerful quantum programming language for designing and simulating quantum circuits.
+                    Features standard gates, parametric rotations, oracles, and real-time state visualization.
+                </p>
+                <div class="hero-buttons">
+                    <a href="cliq-try/index.html" class="btn btn-primary" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">Try Now</a>
+                    <a href="#download" class="btn btn-secondary">Get Started</a>
+                    <a href="#documentation" class="btn btn-secondary">Documentation</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="quantum-circuit">
+                    <div class="qubit-line"></div>
+                    <div class="gate h-gate">H</div>
+                    <div class="gate x-gate">X</div>
+                    <div class="measurement">M</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>What is CLIQLang?</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        CLIQLang is a quantum programming language designed for defining and executing quantum circuits 
+                        using an intuitive custom syntax. It bridges the gap between theoretical quantum computing 
+                        concepts and practical implementation.
+                    </p>
+                    <p>
+                        Perfect for quantum education, research, and algorithm development, CLIQLang supports 
+                        standard quantum gates, parametric rotations, custom matrix definitions, oracle operations, 
+                        conditional logic, and loops.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Quantum Gates</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Possibilities</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Universe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3>Research Ready</h3>
+                        <p>Built for quantum algorithm research and development</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Educational</h3>
+                        <p>Perfect for learning quantum computing concepts</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Interactive</h3>
+                        <p>Real-time quantum state visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quantum Features</h2>
+                <div class="section-divider"></div>
+                <p>Explore the powerful capabilities that make CLIQLang unique</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-icon-bg">
+                            <span class="feature-icon">⚛️</span>
+                        </div>
+                        <h3>Standard Quantum Gates</h3>
+                    </div>
+                    <p>X, Y, Z, H, T, S gates with full control and target qubit specification</p>
+                    <div class="code-example">
+                        <code>H [] [0]  # Hadamard gate</code>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-icon-bg">
+                            <span class="feature-icon">🔄</span>
+                        </div>
+                        <h3>Parametric Gates</h3>
+                    </div>
+                    <p>Rotation gates with custom angles and phase operations</p>
+                    <div class="code-example">
+                        <code>Rx(pi/4) [0] [1]</code>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-icon-bg">
+                            <span class="feature-icon">🔮</span>
+                        </div>
+                        <h3>Oracle Operations</h3>
+                    </div>
+                    <p>Quantum oracles for algorithm development like Grover's search</p>
+                    <div class="code-example">
+                        <code>ORACLE [0,1] [2] [0,3]</code>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-icon-bg">
+                            <span class="feature-icon">🎯</span>
+                        </div>
+                        <h3>Custom Matrices</h3>
+                    </div>
+                    <p>Define custom quantum gates using complex matrix representations</p>
+                    <div class="code-example">
+                        <code>MATRIX: MyGate = [0.707 0.707, -0.707 0.707]</code>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-icon-bg">
+                            <span class="feature-icon">🔀</span>
+                        </div>
+                        <h3>Control Flow</h3>
+                    </div>
+                    <p>Conditional operations and loops for complex quantum algorithms</p>
+                    <div class="code-example">
+                        <code>if [0] == 1: X [] [1] end</code>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-icon-bg">
+                            <span class="feature-icon">📊</span>
+                        </div>
+                        <h3>Real-time Visualization</h3>
+                    </div>
+                    <p>Interactive execution with quantum state vector visualization</p>
+                    <div class="code-example">
+                        <code>! [0,1,2]  # Measurement</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Documentation Section -->
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Documentation</h2>
+                <div class="section-divider"></div>
+                <p>Everything you need to start programming quantum circuits</p>
+            </div>
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <h3>🚀 Getting Started</h3>
+                    <p>Quick setup guide and your first quantum circuit</p>
+                    <div class="code-block">
+                        <code>chmod +x CLIQLang-0.1.0-preview-x86_64.AppImage &amp;&amp; ./CLIQLang-0.1.0-preview-x86_64.AppImage &lt;your-file.cliq&gt;</code>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>⚙️ Requirements</h3>
+                    <p>System requirements and dependencies</p>
+                    <ul>
+                        <li>Linux x86_64 (to run the AppImage)</li>
+                        <li>No Java required for AppImage runtime</li>
+                        <li>Java 22+ and Maven (for building from source)</li>
+                        <li>Terminal/Command Line</li>
+                    </ul>
+                </div>
+                <div class="doc-card">
+                    <h3>🎮 Interactive Commands</h3>
+                    <p>Control your quantum circuit execution</p>
+                    <ul>
+                        <li><code>forward</code> - Apply next gate</li>
+                        <li><code>backward</code> - Revert last gate</li>
+                        <li><code>reset</code> - Reset to |0...0⟩</li>
+                        <li><code>run</code> - Execute all gates</li>
+                        <li><code>run &lt;shots&gt;</code> - Execute full circuit from start for N shots; measure all qubits and show a summary table (bitstring, count, probability)</li>
+                        <li><code>rrun</code> - Reset, then execute all gates from the start</li>
+                        <li><code>frun</code> - Execute to final state (no intermediate steps)</li>
+                        <li><code>show &lt;qubits&gt;</code> - Show marginal probabilities over selected qubits (e.g., <code>show 0</code> or <code>show 0,2</code>). Zero-probability outcomes are omitted.</li>
+                    </ul>
+                </div>
+                <div class="doc-card">
+                    <h3>📉 Noise & Fidelity</h3>
+                    <p>Configure realistic noise models in the interactive setup</p>
+                    <ul>
+                        <li><strong>Depolarization</strong>: Probability p to apply a random Pauli (X/Y/Z) to each target after a gate.</li>
+                        <li><strong>Gate Fidelity</strong>: Average fidelity F. Internally uses a Pauli channel with p = 2·(1 − F).</li>
+                        <li><strong>Decoherence (Amplitude Damping)</strong>:
+                            <ul>
+                                <li>Rate: Chance per affected qubit after each gate to attempt damping.</li>
+                                <li>Decay Probability: If damping triggers, chance that |1⟩ → |0⟩.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="code-block">
+                        <code>
+# When prompted during startup:
+Noise Depolarization: 0.05
+Decoherence Rate: 0.02
+Decay Probability: 0.10
+Gate Fidelity: 0.995
+                        </code>
+                    </div>
+                    <p>Programmatic usage:</p>
+                    <div class="code-block">
+                        <code>
+// Java
+CliqExecutor exec = new CliqExecutor(
+    file,
+    /* depolarizingProb */ 0.05,
+    /* gateFidelity    */ 0.995,
+    /* decoherenceRate */ 0.02,
+    /* decayProbability*/ 0.10
+);
+                        </code>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>🧩 DEFINE Constants</h3>
+                    <p>Create reusable constants/macros for angles, ranges, and conditions</p>
+                    <div class="code-block">
+                        <pre><code>DEFINE TH = pi/4
+Rx(TH) [] [0]
+DEFINE N = 3
+X [] [range(0,N)]</code></pre>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <h3>🧱 MACRO Blocks</h3>
+                    <p>Define reusable parameterized code blocks expanded at parse time</p>
+                    <div class="code-block">
+                        <pre><code>MACRO RotateAndMeasure [angle, q]:
+    Rz(angle) [] [q]
+    ! [q]
+end
+
+DEFINE ANG = pi/4
+RotateAndMeasure [ANG, 0]</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quantum Examples</h2>
+                <div class="section-divider"></div>
+                <p>See CLIQLang in action with these quantum algorithms</p>
+            </div>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <h3>Bell State Creation</h3>
+                    <p>Create quantum entanglement between two qubits</p>
+                    <div class="code-block">
+                        <pre><code># Create Bell State
+H [] [0]          # Superposition
+X [0] [1]         # Entanglement
+! [0,1]          # Measurement</code></pre>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <h3>Quantum Superposition</h3>
+                    <p>Put qubits in superposition with Hadamard gates</p>
+                    <div class="code-block">
+                        <pre><code># Superposition Example
+H [] [range(0,3)]  # All qubits in superposition
+! [0,1,2]         # Measure all qubits</code></pre>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <h3>Oracle Example</h3>
+                    <p>Mark specific input states and observe the effect</p>
+                    <div class="code-block">
+                        <pre><code># Oracle marking states 01 and 11 on two input qubits, flipping output qubit 2
+# Prepare superposition on input qubits 0 and 1
+H [] [0]
+H [] [1]
+# Apply oracle (marks decimal states 1 and 3)
+ORACLE [0,1] [2] [1,3]
+# Optional: amplify marked states (Grover-like step)
+H [] [0]
+H [] [1]
+X [] [0]
+X [] [1]
+H [] [1]
+# Measure all
+! [0,1,2]</code></pre>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <h3>Running with Noise (Shots)</h3>
+                    <p>Configure noise, run multiple shots, and get a summary table</p>
+                    <div class="code-block">
+                        <pre><code># At interactive startup, enter noise parameters when prompted:
+# Noise Depolarization: 0.05
+# Decoherence Rate: 0.02
+# Decay Probability: 0.10
+# Gate Fidelity: 0.995
+
+# Example circuit
+H [] [0]
+H [] [1]
+! [0,1]
+
+# In the interactive shell, run many shots to sample output distribution:
+# run 1024
+# You will see a table: bitstring, count, probability</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="section-header">
+                <h2>Download CLIQLang</h2>
+                <div class="section-divider"></div>
+                <p>Get started with quantum programming today</p>
+            </div>
+            <div class="download-content">
+                <div class="download-info">
+                    <div class="version-info">
+                        <span class="version-badge">Preview</span>
+                        <h3>CLIQLang v0.1.0-preview</h3>
+                        <p>First preview with core quantum features</p>
+                    </div>
+                    <div class="download-links">
+                        <a href="https://github.com/7Abdoman7/CLIQLang/releases" class="btn btn-primary download-btn">
+                            <span class="btn-icon">📥</span>
+                            Download AppImage
+                        </a>
+                        <a href="https://github.com/7Abdoman7/CLIQLang" class="btn btn-secondary">
+                            <span class="btn-icon">📂</span>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="installation-guide">
+                    <h4>Quick Installation</h4>
+                    <div class="install-steps">
+                        <div class="install-step">
+                            <span class="step-number">1</span>
+                            <div class="step-content">
+                                <h5>Download</h5>
+                                <p>Get the AppImage from GitHub releases</p>
+                            </div>
+                        </div>
+                        <div class="install-step">
+                            <span class="step-number">2</span>
+                            <div class="step-content">
+                                <h5>Make Executable</h5>
+                                <p>Run <code>chmod +x CLIQLang-0.1.0-preview-x86_64.AppImage</code></p>
+                            </div>
+                        </div>
+                        <div class="install-step">
+                            <span class="step-number">3</span>
+                            <div class="step-content">
+                                <h5>Run</h5>
+                                <p><code>./CLIQLang-0.1.0-preview-x86_64.AppImage &lt;your-file.cliq&gt;</code></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Section -->
+    <section id="developer" class="developer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet the Developer</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="developer-card">
+                <div class="developer-image">
+                    <img src="Abdelrahman.jpeg" alt="Abdelrahman Elsayed Ahmed" class="profile-img">
+                    <div class="quantum-ring"></div>
+                </div>
+                <div class="developer-info">
+                    <h3>Abdelrahman Elsayed Ahmed</h3>
+                    <p class="developer-title">Quantum Computing Researcher</p>
+                    <p class="developer-university">Graduate, Alexandria University</p>
+                    <p class="developer-bio">
+                        Passionate about quantum computing and software development. Quantum computing researcher and creator of CLIQLang,
+                        bringing quantum programming to developers and researchers worldwide.
+                    </p>
+                    <div class="developer-links">
+                        <a href="https://github.com/7Abdoman7" class="dev-link github">
+                            <span class="link-icon">🐙</span>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/abdelrahman-ahmed-4230b5261/" class="dev-link linkedin">
+                            <span class="link-icon">💼</span>
+                            LinkedIn
+                        </a>
+                        <a href="Abdelrahman_Elsayed_Ahmed.pdf" class="dev-link resume">
+                            <span class="link-icon">📄</span>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <div class="section-divider"></div>
+                <p>Have questions or want to contribute? Reach out!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:abdo.elsayd102@gmail.com">abdo.elsayd102@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <span>+201222448817</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💰</div>
+                        <div class="contact-details">
+                            <h4>Support Development</h4>
+                            <span>PayPal: @Abdoman77</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h4>Send a Message</h4>
+                    <form action="mailto:abdo.elsayd102@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="logo-icon.svg" alt="CLIQLang" class="footer-logo-img">
+                    <span>CLIQLang</span>
+                </div>
+                    <p>Quantum programming for the future</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#documentation">Documentation</a></li>
+                            <li><a href="#examples">Examples</a></li>
+                            <li><a href="https://github.com/7Abdoman7/CLIQLang">GitHub</a></li>
+                            <li><a href="LICENSE">License</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="https://github.com/7Abdoman7">GitHub Profile</a></li>
+                            <li><a href="https://www.linkedin.com/in/abdelrahman-ahmed-4230b5261/">LinkedIn</a></li>
+                            <li><a href="mailto:abdo.elsayd102@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CLIQLang. All Rights Reserved. | Licensed under MIT License</p>
+                <p>Made with ⚛️ by Abdelrahman Elsayed Ahmed</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop">
+        ⬆️
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
