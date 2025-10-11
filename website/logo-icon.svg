@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="quantumGradientIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7b68ee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b6b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glowIcon">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#0a0a0f" stroke="url(#quantumGradientIcon)" stroke-width="2"/>
+  
+  <!-- Quantum atom symbol -->
+  <g filter="url(#glowIcon)">
+    <!-- Electron orbits -->
+    <ellipse cx="32" cy="32" rx="18" ry="10" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="0 32 32;120 32 32;240 32 32;360 32 32" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="32" cy="32" rx="18" ry="10" fill="none" stroke="#7b68ee" stroke-width="2" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="60 32 32;180 32 32;300 32 32;420 32 32" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="32" cy="32" rx="18" ry="10" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" values="120 32 32;240 32 32;360 32 32;480 32 32" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Nucleus -->
+    <circle cx="32" cy="32" r="4" fill="url(#quantumGradientIcon)">
+      <animate attributeName="r" values="4;5;4" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Electrons -->
+    <circle r="2.5" fill="#00d4ff" opacity="0.9">
+      <animateMotion dur="2s" repeatCount="indefinite">
+        <path d="M 32,22 A 10,10 0 1,1 32,42 A 10,10 0 1,1 32,22"/>
+      </animateMotion>
+    </circle>
+    <circle r="2.5" fill="#7b68ee" opacity="0.9">
+      <animateMotion dur="2.5s" repeatCount="indefinite">
+        <path d="M 44,26 A 12,12 0 1,0 20,38 A 12,12 0 1,0 44,26"/>
+      </animateMotion>
+    </circle>
+  </g>
+  
+  <!-- Subtle "Q" in the center -->
+  <text x="32" y="38" font-family="'Inter', sans-serif" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle" opacity="0.7">Q</text>
+</svg>
